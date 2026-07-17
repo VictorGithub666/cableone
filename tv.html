@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TV Subscription — CableOne</title>
+  <meta name="description" content="CableOne digital cable TV: 200+ channels, full HD picture, Dolby sound, easy set top box. KShs 2,400/month.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+      <!-- Favicon -->
+      <link rel="icon" type="image/png" sizes="32x32" href="assets/img/cable-one-logo.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="assets/img/cable-one-logo.png">
+      <link rel="apple-touch-icon" href="assets/img/cable-one-logo.png">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <img src="assets/img/cable-one-logo.png" alt="CableOne" class="preloader-logo">
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="c1-header">
+    <nav class="navbar navbar-expand-lg container">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/img/cable-one-logo.png" alt="CableOne" height="40" class="brand-logo">
+        <span style="color: #fff200;">CableOne</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+        <i class="bi bi-list fs-2" style="color: #fff200;"></i>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navMain">
+        <ul class="navbar-nav align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="wifi.html">WiFi</a></li>
+          <li class="nav-item"><a class="nav-link active" href="tv.html">TV</a></li>
+          <li class="nav-item"><a class="nav-link" href="combo.html">Combo</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+          <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+            <a class="btn-c1-primary" href="#tv-plan"><i class="bi bi-lightning-charge-fill"></i> Get Connected</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero with Background Image -->
+  <section class="page-hero" style="background-image: url('assets/img/tv-subscription-section.jpg'); background-size: cover; background-position: center; position: relative;">
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 10, 10, 0.65); z-index: 0;"></div>
+    <svg class="signal-arcs" viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg" style="z-index: 1;">
+      <circle cx="210" cy="210" r="90" fill="none" stroke="#87ceeb" stroke-width="1.5" opacity="0.35"></circle>
+      <circle cx="210" cy="210" r="150" fill="none" stroke="#a8e063" stroke-width="1.5" opacity="0.3"></circle>
+      <circle cx="210" cy="210" r="205" fill="none" stroke="#fff200" stroke-width="1.5" opacity="0.2"></circle>
+    </svg>
+    <div class="container position-relative" style="z-index: 2;">
+      <span class="eyebrow on-dark">Entertainment</span>
+      <h1 class="mt-2 mb-3" style="font-size:clamp(2rem,4vw,2.8rem);">TV Subscription</h1>
+      <p style="color:rgba(255,255,255,.7);max-width:520px;">200+ channels, full HD picture and Dolby sound &mdash; on a set top box that's ready in minutes.</p>
+      <nav aria-label="breadcrumb" class="mt-3">
+        <ol class="breadcrumb mb-0" style="--bs-breadcrumb-divider-color: rgba(255,255,255,.4);">
+          <li class="breadcrumb-item"><a href="index.html" style="color:rgba(255,255,255,.6);">Home</a></li>
+          <li class="breadcrumb-item active" style="color:#fff;" aria-current="page">TV</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <section id="tv-plan" class="section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="tv-card">
+            <svg class="signal-arcs" viewBox="0 0 380 380" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="190" cy="190" r="90" fill="none" stroke="#87ceeb" stroke-width="1.5" opacity="0.4"></circle>
+              <circle cx="190" cy="190" r="150" fill="none" stroke="#a8e063" stroke-width="1.5" opacity="0.3"></circle>
+            </svg>
+            <div class="tv-icon-tile"><i class="bi bi-tv"></i></div>
+            <span class="eyebrow on-dark">Monthly Subscription</span>
+            <h3 class="mt-2 mb-3">CableOne TV</h3>
+            <div class="tv-price mb-3">2,400 <span style="font-size:1rem;color:rgba(255,255,255,.5);">KShs/mo</span></div>
+            <button class="btn-subscribe featured" style="width:auto;padding:0.85rem 2.25rem;" data-bs-toggle="modal" data-bs-target="#subscribeModal"
+              data-plan="TV Subscription" data-price="KShs 2,400/mo" data-category="TV">Subscribe Now</button>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <span class="eyebrow">What's included</span>
+          <h2 class="mt-2 mb-4">Everything your household watches</h2>
+
+          <div class="why-item mb-4">
+            <div class="icon-badge" style="background:var(--c1-blue);"><i class="bi bi-collection-play"></i></div>
+            <div><h4>Over 200 channels</h4><p>News, sport, movies, kids' programming and local stations in one guide.</p></div>
+          </div>
+          <div class="why-item mb-4">
+            <div class="icon-badge" style="background:var(--c1-green);"><i class="bi bi-tools"></i></div>
+            <div><h4>Easy-to-install set top box</h4><p>Our technician sets it up for you at no extra cost.</p></div>
+          </div>
+          <div class="why-item">
+            <div class="icon-badge" style="background:var(--c1-orange);color:#fff;"><i class="bi bi-soundwave"></i></div>
+            <div><h4>Full HD picture &amp; Dolby Sound</h4><p>Sharper images and richer audio for movie nights.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container text-center">
+      <span class="eyebrow">Pair it up</span>
+      <h2 class="mt-2 mb-3">Add fibre internet and save</h2>
+      <p class="text-muted mb-4">Bundle this TV subscription with any WiFi tier as a Combo Package, at a lower combined monthly price.</p>
+      <a href="combo.html" class="btn-c1-outline-dark">View Combo Packages <i class="bi bi-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="c1-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-brand mb-3">
+            <img src="assets/img/cable-one-logo.png" alt="CableOne" height="35">
+          </div>
+          <p style="font-size:0.92rem;">Home fibre internet and premium digital TV for Nairobi households and businesses.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://wa.me/254703700706" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-3 col-6">
+          <h5>Packages</h5>
+          <ul>
+            <li><a href="wifi.html">WiFi</a></li>
+            <li><a href="tv.html">TV Subscription</a></li>
+            <li><a href="combo.html">Combo Deals</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-3 col-6">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-12">
+          <h5>Contact</h5>
+          <ul>
+            <li><i class="bi bi-geo-alt me-1"></i> PMC Plaza, 3rd Parklands Ave, Nairobi</li>
+            <li><i class="bi bi-telephone me-1"></i> +254 777 247 364</li>
+            <li><i class="bi bi-envelope me-1"></i> info@cableone.co.ke</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom text-center">&copy; <span id="year"></span> CableOne. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <div class="mobile-cta-bar">
+    <a href="#tv-plan" class="btn-c1-primary w-100 justify-content-center"><i class="bi bi-lightning-charge-fill"></i> Get Connected</a>
+  </div>
+  <a href="#" class="scroll-top"><i class="bi bi-arrow-up"></i></a>
+
+  <div class="modal fade subscribe-modal" id="subscribeModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <h5 class="modal-title">Subscribe Now</h5>
+            <small>We'll call you to confirm installation</small>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="plan-chip">
+            <div><span class="chip-label">Selected Plan</span><span id="planDisplay">&mdash;</span></div>
+            <div id="priceDisplay">&mdash;</div>
+          </div>
+          <form id="subscribeForm">
+            <input type="hidden" name="access_key" value="YOUR-WEB3FORMS-ACCESS-KEY">
+            <input type="hidden" name="subject" value="New CableOne Subscription Request">
+            <input type="hidden" name="plan" id="planField">
+            <div class="mb-3">
+              <label class="form-label">Full Name</label>
+              <input type="text" name="name" class="form-control" placeholder="Jane Doe" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Phone Number</label>
+              <input type="tel" name="phone" class="form-control" placeholder="07XX XXX XXX" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Location / Estate</label>
+              <input type="text" name="location" class="form-control" placeholder="e.g. Parklands, Nairobi" required>
+            </div>
+            <button type="submit" id="subscribeSubmitBtn" class="btn-subscribe featured">Subscribe Now</button>
+            <div id="formStatus"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
