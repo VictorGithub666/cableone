@@ -66,55 +66,55 @@
   });
 
   /* ---- Web3Forms submission ---- */
-  var form = document.getElementById("subscribeForm");
-  if (form) {
-    var statusBox = document.getElementById("formStatus");
-    var submitBtn = document.getElementById("subscribeSubmitBtn");
+  // var form = document.getElementById("subscribeForm");
+  // if (form) {
+  //   var statusBox = document.getElementById("formStatus");
+  //   var submitBtn = document.getElementById("subscribeSubmitBtn");
 
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
+  //   form.addEventListener("submit", function (e) {
+  //     e.preventDefault();
 
-      var accessKey = form.querySelector('input[name="access_key"]').value;
-      if (!accessKey || accessKey.indexOf("YOUR-WEB3FORMS") !== -1) {
-        showStatus("Add your Web3Forms access key in the form before going live.", "danger");
-        return;
-      }
+  //     var accessKey = form.querySelector('input[name="access_key"]').value;
+  //     if (!accessKey || accessKey.indexOf("YOUR-WEB3FORMS") !== -1) {
+  //       showStatus("Add your Web3Forms access key in the form before going live.", "danger");
+  //       return;
+  //     }
 
-      submitBtn.disabled = true;
-      submitBtn.textContent = "Sending...";
+  //     submitBtn.disabled = true;
+  //     submitBtn.textContent = "Sending...";
 
-      var formData = new FormData(form);
-      var payload = Object.fromEntries(formData.entries());
+  //     var formData = new FormData(form);
+  //     var payload = Object.fromEntries(formData.entries());
 
-      fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify(payload)
-      })
-        .then(function (res) { return res.json(); })
-        .then(function (data) {
-          if (data.success) {
-            window.location.href = "thank-you.html";
-          } else {
-            showStatus(data.message || "Something went wrong. Please try again.", "danger");
-            resetBtn();
-          }
-        })
-        .catch(function () {
-          showStatus("Network error. Please check your connection and try again.", "danger");
-          resetBtn();
-        });
-    });
+  //     fetch("https://api.web3forms.com/submit", {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/json", Accept: "application/json" },
+  //       body: JSON.stringify(payload)
+  //     })
+  //       .then(function (res) { return res.json(); })
+  //       .then(function (data) {
+  //         if (data.success) {
+  //           window.location.href = "thank-you.html";
+  //         } else {
+  //           showStatus(data.message || "Something went wrong. Please try again.", "danger");
+  //           resetBtn();
+  //         }
+  //       })
+  //       .catch(function () {
+  //         showStatus("Network error. Please check your connection and try again.", "danger");
+  //         resetBtn();
+  //       });
+  //   });
 
-    function resetBtn() {
-      submitBtn.disabled = false;
-      submitBtn.textContent = "Subscribe Now";
-    }
+  //   function resetBtn() {
+  //     submitBtn.disabled = false;
+  //     submitBtn.textContent = "Subscribe Now";
+  //   }
 
-    function showStatus(msg, type) {
-      if (!statusBox) return;
-      statusBox.textContent = msg;
-      statusBox.className = "show text-" + type;
-    }
-  }
+  //   function showStatus(msg, type) {
+  //     if (!statusBox) return;
+  //     statusBox.textContent = msg;
+  //     statusBox.className = "show text-" + type;
+  //   }
+  // }
 })();
