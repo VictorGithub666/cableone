@@ -252,10 +252,16 @@
             <div><span class="chip-label">Selected Plan</span><span id="planDisplay">&mdash;</span></div>
             <div id="priceDisplay">&mdash;</div>
           </div>
-          <form id="subscribeForm">
-            <input type="hidden" name="access_key" value="YOUR-WEB3FORMS-ACCESS-KEY">
-            <input type="hidden" name="subject" value="New CableOne Subscription Request">
+          <form id="subscribeForm" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Paste the access key from your Web3Forms account (signed up with info@cableone.co.ke) -->
+            <input type="hidden" name="access_key" value="941a48fb-2fb3-415b-96e1-b257e5c51adf">
+            <input type="hidden" name="subject" id="subjectField" value="New CableOne Subscription Request">
+            <input type="hidden" name="from_name" value="CableOne Website">
+            <input type="hidden" name="redirect" value="https://cableone.co.ke/thank-you.html">
             <input type="hidden" name="plan" id="planField">
+            <input type="hidden" name="package_price" id="priceField">
+            <input type="hidden" name="category" id="categoryField">
+            <input type="checkbox" name="botcheck" class="d-none" style="display:none;" tabindex="-1" autocomplete="off">
             <div class="mb-3">
               <label class="form-label">Full Name</label>
               <input type="text" name="name" class="form-control" placeholder="Jane Doe" required>
@@ -278,6 +284,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/script.js"></script>
+  <script src="assets/js/subscribe-form.js"></script>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
